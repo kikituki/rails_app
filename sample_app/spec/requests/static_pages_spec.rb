@@ -17,4 +17,21 @@ describe "StaticPages" do
   		expect(page).to have_content('Sample App')
   	end
   end
+
+ describe "Help page" do
+  	#画面には’this is Help Page’と表示されるはず
+  	it "should have the content 'this is Help Page'" do
+  		visit '/static_pages/help'
+  		expect(page).to have_content('this is Help Page')
+  	end
+  end
+
+ describe "About page" do
+  	#画面には’About Page’と表示されるはず
+  	it "should have the content 'About Page'" do
+  		visit '/static_pages/about'
+  		expect(page).to have_content('About Page')
+  	end
+  end
+
 end
