@@ -11,4 +11,8 @@ class StaticPagesController < ApplicationController
   def about
   end
 
+  #Aboutページを表示する
+  def new
+  end
+
 end
