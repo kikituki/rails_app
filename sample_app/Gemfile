@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+#source 'http://production.cf.rubygems.org'
+#source 'http://bundler-api.herokuapp.com'
+ ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
@@ -7,8 +10,20 @@ gem 'rails', '4.0.4'
 #開発とテストで必要なもの
 group :development, :test do
 	gem 'sqlite3'
+        #テストフレームワーク
 	gem 'rspec-rails'
+        #ファイルを監視してテストの自動化
         gem 'guard-rspec','2.5.0'
+        #rspecの高速化 
+        #インストールできなかったのでローカルでインストールしました
+        #  sudo gem install -l ~/spork-1.0.0rc3.gem 
+        #  sudo gem install -l ~/guard-spork-1.5.1.gem
+        #  sudo gem install -l ~/spork-rails-4.0.0.gem 
+        #  sudo gem install -l ~/childprocess-0.5.2.gem
+        gem 'spork-rails', '4.0.0'
+        gem 'guard-spork', '1.5.1'
+        gem 'childprocess', '0.5.2'
+        gem 'spork', '1.0.0rc3'
 end
 
 #テストで必要なもの
